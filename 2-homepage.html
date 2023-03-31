@@ -19,10 +19,17 @@
 
     <!-- Bootstrap styling -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Misc Styling -->
     <link rel="stylesheet" href="styles.css">
 
     <!-- JS Scripts -->
     <script src="scripts.js"></script>
+
+    <!-- Slick Scripts -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     
   </head>
 
@@ -126,8 +133,19 @@
         </div>
       </section>
 
-      <!-- Popular tutorials section -->
-      <section class="container-fluid text-dark white-bg py-5 mb-5 d-none d-sm-block">
+      <!-- Popular tutorials carousel -->
+      <section class="container-fluid text-dark white-bg py-5 mb-5 d-sm-block">
+        <div class="container-lg">
+          <div class="carousel-container mx-5">
+            <div class="carousel px-5" id="popular-card">
+              <!-- Cards will be appended here -->
+            </div>
+            <div class="loader" id="popular-loader"></div>
+          </div>
+        </div>
+      </section>
+            
+      <!-- <section class="container-fluid text-dark white-bg py-5 mb-5 d-none d-sm-block">
         <div class="container-lg quotes">
             <div id="videoCarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -243,9 +261,9 @@
                 </a>             
             </div>
         </div>
-      </section>
+      </section> -->
       <!-- Phone Carousel -->
-      <section class="container-fluid text-dark white-bg py-5 mb-5 d-sm-none">
+      <!-- <section class="container-fluid text-dark white-bg py-5 mb-5 d-sm-none">
         <div class="container-lg quotes">
           <div id="videoCarousel2" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
@@ -338,7 +356,7 @@
               </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Membership Section -->
       <section class="bg-dark container-fluid">

@@ -115,6 +115,7 @@ li a:hover, li a:focus {
   display: none;
 }
 
+/* Purple Carousel Arrows */
 .leftArrow {
   background-image: url('./images/arrow_white_left.png');
   width: 50px;
@@ -131,7 +132,95 @@ li a:hover, li a:focus {
   background-repeat: no-repeat;
 }
 
-.leftArrowVideo {
+/* Video Carousel Arrows */
+.leftArrowVideo:before {
+	content: '\e903';
+	font-size: 8rem;
+	color: black;
+}
+
+.rightArrowVideo {
+	background-image: url('images/arrow_black_right.png');
+	font-size: 8rem;
+	color: black;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    display: inline-block;
+    width: 29px;
+    height: 62px;
+    background: no-repeat 50%/100% 100%
+}
+.carousel-control-prev-icon {
+    background-image: url("./images/arrow_white_left.png");
+}
+.carousel-control-next-icon {
+    background-image: url("./images/arrow_white_right.png");
+}
+
+
+.loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #C271FF;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 5s cubic-bezier(0.075, 0.82, 0.165, 5) infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Slick stuff */
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  color: #333;
+  transform: translateY(-69%); /* nice */
+}
+
+.slick-prev {
+  background: url('./images/arrow_black_left.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+}
+
+.slick-next {
+  background: url('./images/arrow_black_right.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+}
+
+/* .slick-prev:before,
+.slick-next:before {
+  
+} */
+
+.slick-prev {
+  left: 0;
+  font-size: 0;
+  width: 29px;
+  height: 62px;
+  background-color:rgba(0, 0, 0, 0.0);
+}
+
+.slick-next {
+  right: 0;
+  font-size: 0;
+  width: 29px;
+  height: 62px;
+  background-color:rgba(0, 0, 0, 0.0);
+}
+/* .leftArrowVideo {
   background-image: url('./images/arrow_black_left.png');
   width: 50px;
   height: 90px;
@@ -188,7 +277,7 @@ li a:hover, li a:focus {
 .card-img-overlay {
   width: 5rem;
   height: 5rem;
-}
+} */
 /**--- Membership ---**/
 
 .bg-dark {
