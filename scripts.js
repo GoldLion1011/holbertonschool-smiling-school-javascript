@@ -5,6 +5,7 @@
 $(document).ready(function() {
 	generate_quotes();
 	generate_tutorials();
+  generate_latest();
 });
 
 
@@ -125,12 +126,76 @@ function generate_tutorials() {
 			$('.testimonialCarousel').removeClass('d-none');
 		}
 	});
+}
 
+// LATEST VIDEOS CAROUSEL
+function generate_latest() {
+	$.ajax({
+		url: 'https://smileschool-api.hbtn.info/latest-videos',
+		type: 'GET',
+		success: function(data) {
+			let cards = '';
+			data.forEach((item, index) => {
+				$('#latest-card').append(`
+					<div class="h-100 col-12 col-sm-6 col-md-4">
+						<div class="card border-0 d-flex flex-column">
+							<img src="${item.thumb_url}" class="card-img-top" alt="${item.title}">
+							<div class="card-body">
+								<h5 class="card-title">${item.title}</h5>
+								<h6>${item['sub-title']}</h6>
+								
+									<div class="row">
+										<img src="${item.author_pic_url}" alt="tiny profile" style="height: 20px;" class="mx-3 rounded-circle">
+										<h6 class="purple">${item.author}</h6>
+									</div>
+									<di class="row mx-0">
+									${(function fun() {
+										let stars = '';
+										for (let i = 1; i <= 5; i++)
+										{
+											if (i < item.star) {
+												stars += `<img src="./images/star_on.png" height="15px" width="15px">`
+											} else {
+												stars += `<img src="./images/star_off.png" height="15px" width="15px">`
+											}
+										}
+										return stars;
+									})
+									()}
+									<p class='ml-auto purple'>${item.duration}</p>
+							
+							</div>
+						</div>
+					</div>
+					`);
+			});
+			$('#latest-card').slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 2
+						}
+					},
+					{
+						breakpoint: 576,
+						settings: {
+							slidesToShow: 1
+						}
+					}
+				]
+			});
+			// set the initial height of the cards after they have been added to the page
+			setCardHeight();
 
-		// update the height of the cards when the window is resized
-		$(window).resize(setCardHeight);
-};
-
+			// remove loader and show carousel
+			$('#latest-loader').remove();
+			$('.testimonialCarousel').removeClass('d-none');
+		}
+	});
+}
 // function to set the height of all cards to match the height of the tallest card
 function setCardHeight() {
 	// reset the height of all cards to their initial value
