@@ -220,64 +220,7 @@ li a:hover, li a:focus {
   height: 62px;
   background-color:rgba(0, 0, 0, 0.0);
 }
-/* .leftArrowVideo {
-  background-image: url('./images/arrow_black_left.png');
-  width: 50px;
-  height: 90px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
 
-.rightArrowVideo {
-  background-image: url('./images/arrow_black_right.png');
-  width: 50px;
-  height: 90px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.pl-6 {
-  padding-left: 3.5rem;
-  padding-right: 3rem;
-}
-
-.mins {
-  padding-left: 5rem;
-}
-
-.videoLeft {
-  top: 8.5rem;
-  padding-right: 1rem;
-  padding-left: auto;
-}
-
-.videoRight {
-  top: 8.5rem;
-  padding-left: 1rem;
-  padding-right: auto;
-}
-
-.search {
-  color: white;
-  font-size: 1.75rem;
-  opacity: .8;
-}
-
-::placeholder {
-  color: lightgrey;
-  font-size: 1.75rem;
-  opacity: .6;
-}
-
-.play {
-  height: 125px;
-  width: 125px;
-}
-
-.card-img-overlay {
-  width: 5rem;
-  height: 5rem;
-} */
 /**--- Membership ---**/
 
 .bg-dark {
@@ -359,4 +302,16 @@ li a:hover, li a:focus {
 
 .coiny {
   font-family: 'Coiny', cursive;
+}
+
+/* Pre-pre-LD */
+.dropdown-item a:hover {
+	color: #C271FF !important;
+}
+
+#sort-by:focus,
+#sort-by:hover,
+#topic:focus,
+#topic:hover {
+	background-color: #C271FF;
 }
