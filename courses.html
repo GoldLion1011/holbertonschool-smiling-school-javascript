@@ -17,9 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Source+Sans+Pro:wght@200;300;400;600&display=swap" rel="stylesheet">
 
     <!-- JQuery and Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>  
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>  
 
     <!-- Bootstrap styling -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -85,11 +85,9 @@
 			<div class="row py-3 text-white">
 				<div class="col-sm-12 col-lg my-3 rounded-top">
 					<p class="mb-2">KEYWORDS</p>
-					<div
-						class="bg-white d-flex flex-row border-bottom border-top-0 border-left-0 border-right-0 rounded-top">
+					<div class="bg-white d-flex flex-row border-bottom border-top-0 border-left-0 border-right-0 rounded-top">
 						<i style="font-size: 1.75rem; opacity: .8;" class="fas fa-search purple-bg py-2 pt-3 pl-3"></i>
-						<input style="outline: none;" class="search border-0 purple-bg py-2 pl-4 w-100"
-							placeholder="Search by keywords" type="text">
+						<input id="search" style="outline: none;" class="search border-0 purple-bg py-2 pl-4 w-100" placeholder="Search by keywords" type="text">
 					</div>
 				</div>
 				<!-- Topic -->
@@ -113,8 +111,7 @@
 						<button
 							style="opacity: .8; color: white; font-size: 1.75rem; font-weight: lighter; box-shadow: 0 0 0 0;"
 							class="btn btn-secondary rounded-0 dropdown-toggle pl-3 d-flex align-items-center justify-content-between w-100 py-2"
-							type="button" id="sort-by" data-toggle="dropdown" aria-expanded="false">Most Popular<span
-								class="caret"></span>
+							type="button" id="sort-by" data-toggle="dropdown" aria-expanded="false">Most Popular<span class="caret"></span>
 						</button>
 						<ul id="sorts" class="dropdown-menu w-100" role="menu" aria-labelledby="sort-by">
 						</ul>
@@ -163,7 +160,7 @@
       <p class="text-center text-muted small pb-5 mb-0">©smileschool 2020</p>
     </div>
   </footer>      
-  
+
 </body>
 
 </html>
